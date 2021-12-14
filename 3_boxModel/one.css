@@ -1,0 +1,67 @@
+.class {
+  /* padding: 10px; // This is goind to all four size-adjust */
+  /* padding-left: 10px ; */
+  /* padding-right:10px; */
+  /* padding : 20px 40px; 20px for top and bottom and 40px for left and right */
+  /* padding: 10px 50px 100px 150px; this clockwise (top left bottom right) */
+}
+
+/* .one {
+  height: 180px;
+  width: 180px;
+  border: solid;
+  background-color: aqua;
+  border-width: 0px 10px 20px 20px;
+  padding: 30px;
+  border-color: black;
+} */
+
+/* inline (width == content value and you can't change)
+block (you can change width but element still block line)
+inline-block (you can change width and not a block element) */
+
+/* Position default = static */
+
+/* Position relative-> {top:20px} 
+relative to it's static the element move 20px down
+ & does not effect other elements position*/
+
+/* position Absolute -> move with respect to its parent div */
+
+/* position fixed -> position relative to window
+don't change even if you scroll */
+
+/* position: sticky // stick to the window  */
+
+.one {
+  height: 180px;
+  width: 180px;
+  border: solid;
+  background-color: aqua;
+  border-width: 0px 10px 20px 20px;
+  padding: 30px;
+  border-color: black;
+  float: left;
+  
+}
+.two {
+  height: 180px;
+  width: 180px;
+  border: solid;
+  background-color: rgb(255, 132, 0);
+  border-width: 0px 10px 20px 20px;
+  padding: 30px;
+  border-color: black;
+
+  /* clear: both; */
+  margin-left: 1000px;
+}
+.three {
+  height: 180px;
+  width: 180px;
+  border: solid;
+  background-color: rgb(149, 0, 255);
+  border-width: 0px 10px 20px 20px;
+  padding: 30px;
+  border-color: black;
+}
