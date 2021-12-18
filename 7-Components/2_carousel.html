@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Component</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: #343a40;
+      border-bottom: 8px solid #087f5b;
+      line-height: 1;
+    }
+
+    .carousel {
+      width: 800px;
+      background-color: #087f5b;
+      margin: 100px auto;
+      border-radius: 8px;
+      color: rgb(216, 253, 206);
+
+      padding: 32px 48px 32px 86px ;
+
+      display: flex;
+      align-items: center;
+      gap: 86px;
+
+      position: relative;
+
+    }
+
+    img {
+      height: 200px;
+      border-radius: 8px;
+      transform: scale(1.5);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .testimonial-text {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+
+    .testimonial-author {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .testimonial-job {
+      font-size: 12px;
+    }
+
+    .btn {
+      background-color: #fff;
+      border: none;
+      height: 40px;
+      width: 40px;
+      box-shadow: 0 12px 24px rgba(20, 19, 19, 0.204);
+      cursor: pointer;
+
+      position: absolute;
+      /* To bring the btn out of the flow 
+      we use position absolute*/
+      /* We also have to specify, with respect to which element
+      the position is absolute, so we define parent container Position-Relative*/
+
+      border-radius: 50%;
+
+    }
+
+    .btn--left {
+      /* WRT parent */
+      left: 0;
+      top: 50%;
+
+      /* WRT element itself */
+      transform: translate(-50%,-50%);
+
+    }
+
+    .btn--right {
+      right: 0;
+      top: 50%;
+      transform: translate(+50%,-50%);
+    }
+
+    .btn-icon {
+      height: 24px;
+      width: 24px;
+      stroke: #087f5b;
+    }
+
+    .dots{
+      position: absolute;
+      bottom:0%;
+      right:50%;
+      transform: translate(50%,250%);
+      
+      display: flex;
+      gap: 12px;
+      
+    }
+    .dot{
+        background-color: #fff;
+        height: 12px;
+        width: 12px;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+    }
+
+    .dot--fill{
+      background-color: #087f5b ;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="carousel">
+    <img src="maria.jpg" alt="Maria de Almeida">
+    <blockquote class="testimonial">
+      <p class="testimonial-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nesciunt voluptatibus distinctio obcaecati corporis
+        nihil rerum enim ad. Ipsum vel quidem deleniti autem necessitatibus consequatur,
+        excepturi ratione maiores iusto
+        placeat quas.
+      </p>
+      <p class="testimonial-author">Maria de Alameda</p>
+      <p class="testimonial-job">Senior Product Manager at EDP Commercial</p>
+    </blockquote>
+
+    <button class="btn btn--left">
+      <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button class="btn btn--right">
+      <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+      </svg>
+    </button>
+    <div class="dots">
+      <button class="dot dot--fill">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
+    </div>
+  </div>
+</body>
+
+</html>
