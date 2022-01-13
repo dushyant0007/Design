@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexbox</title>
+  <style>
+    .el--1 {
+      background-color: blueviolet;
+    }
+
+    .el--2 {
+      background-color: orangered;
+    }
+
+    .el--3 {
+      background-color: green;
+      height: 150px;
+    }
+
+    .el--4 {
+      background-color: goldenrod;
+    }
+
+    .el--5 {
+      background-color: palevioletred;
+    }
+
+    .el--6 {
+      background-color: steelblue;
+    }
+
+    .el--7 {
+      background-color: yellow;
+    }
+
+    .el--8 {
+      background-color: crimson;
+    }
+
+    .container {
+      /* STARTER */
+      font-family: sans-serif;
+      background-color: #ddd;
+      font-size: 30px;
+      margin: 40px;
+
+      /* FLEXBOX */
+      display: flex;
+      /* all the element in the container are 
+        going to aline side by side */
+      /*All the item in container called flex items  */
+      /* The width of flex items = as much as they need to fit content */
+      /* Vertically by default all the items going to become tall as  
+           much as the longest among them */
+           
+
+      /* align-items:flex-end; */
+      align-items: center;
+      /*aline all the items vertically center in the container */
+      /* width and hight = to fit content by default */
+
+      justify-content: center;
+      /*aline all the items horizontally center in the container */
+
+      /* justify-content: space-between; */
+      /* divide all the space horizontally b/w items in the container */
+
+      gap:20px;
+      /* to create horizontal space b/w items, without using margin */
+      
+
+      /* flex-direction: ;  */
+      /* default row | row-reverse | column | column-reverse */
+      /* To define which is the main axis */
+      /* By default horizontal going left to right is main axis and 
+      vertically top to bottom is cross axis */
+
+
+      /* flex-wrap: ; */
+      /* default  nowrap | wrap | wrap-reverse */
+      /* To allow items to wrap into a new line/row if they are too long */
+
+      /* align-content: ; */
+      /* default stretch | flex-start | flex-end |center|space-between|space=around*/
+      /* Only apples when there are multiple lines */
+
+    }
+
+
+    .el{
+
+      /*flex-grow: ;/* default value is 0 */
+      /* divide the empty space in the parent container
+       to increase width of all the items equally which have class .el */
+
+
+      /* flex-basis: 100px ; */
+      /* default value is auto */
+      /* If the element is smaller then 100px,
+       then the new element width is going to be 100px */
+       /* the width of the item not going to exceed container 
+       to allow set flex flex-shrink:0;  */
+
+       /*flex flex-shrink: ;/* default value is 1 */
+
+        /* flex: flex-grow flex-shrink flex-basis; */
+        /* Short hand way */
+
+
+    }
+
+    .el--1{
+      /* align-self:flex-start;  */
+      /* This is the property for flex item not for flex container */
+
+      /*flex-grow: ;/* default value is 0 */
+      /* To remove all the empty space,only el--1 width going to increase */
+    }
+    .el--5{
+      /* align-self: stretch; */
+    }
+
+    .el--6{
+      /* order:-1; */
+      /* default value of all the item's order is 0 */
+      /* to change the order of el--6 item to first item
+      we have to specify the order lowe then the first item*/
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="el el--1">HTML</div>
+    <div class="el el--2">and</div>
+    <div class="el el--3">CSS</div>
+    <div class="el el--4">are</div>
+    <div class="el el--5">amazing</div>
+    <div class="el el--6">languages</div>
+    <div class="el el--7">to</div>
+    <div class="el el--8">learn</div>
+  </div>
+</body>
+
+</html>
